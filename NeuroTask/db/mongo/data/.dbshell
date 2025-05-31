@@ -1,0 +1,18 @@
+use NeuroTask
+show collections
+show dbs
+use NeuroTask
+show collections
+use Neurotask
+show collections
+db.analisis_usuario.find().pretty()
+show dbs
+use Neurotask
+show collections
+db.analisis_usuario.find().pretty()
+show dbs
+use Neurotask
+show collections
+db.analisis_usuario.find().pretty()
+rs.initiate()
+rs.status()

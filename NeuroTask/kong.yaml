@@ -1,0 +1,78 @@
+_format_version: "3.0"
+_transform: true
+
+plugins:
+  - name: prometheus
+    enabled: true
+
+upstreams:
+  - name: micro_user_upstream
+    targets:
+      - target: micro_user:3009
+    
+
+
+  - name: micro_projects_upstream
+    targets:
+      - target: micro_projects:3008
+
+
+  - name: micro_task_upstream
+    targets:
+      - target: micro_task:3007
+
+
+  - name: micro_coments_upstream
+    targets:
+      - target: micro_coments:3010
+
+
+services:
+  - name: micro_user
+    host: micro_user_upstream
+    port: 3009
+    protocol: http
+    routes:
+      - name: micro_user_route
+        paths:
+          - /api/user
+        strip_path: false
+    plugins:
+      - name: prometheus
+
+
+  - name: micro_projects
+    host: micro_projects_upstream
+    port: 3008
+    protocol: http
+    routes:
+      - name: micro_projects_route
+        paths:
+          - /api/project
+        strip_path: false
+    plugins:
+      - name: prometheus
+
+  - name: micro_task
+    host: micro_task_upstream
+    port: 3007
+    protocol: http
+    routes:
+      - name: micro_task_route
+        paths:
+          - /api/task
+        strip_path: false
+    plugins:
+      - name: prometheus
+
+  - name: micro_coments
+    host: micro_coments_upstream
+    port: 3010
+    protocol: http
+    routes:
+      - name: micro_coments_route
+        paths:
+          - /api/comments
+        strip_path: false
+    plugins:
+      - name: prometheus

@@ -1,0 +1,23 @@
+const mongoose = require('mongoose');
+
+//const DB_URI = 'mongodb+srv://stevenl:3j57C1JA0TcyEhyN@cluster0.b8qxkgf.mongodb.net/Neurotask';
+const DB_URI = 'mongodb://mongo_db:27017/Neurotask';
+
+
+const connectDB = async () => {
+    try {
+        mongoose.connect(DB_URI, {
+            autoIndex: true
+        })
+
+        console.log('DB Online')
+    } catch (err) {
+        console.error('Database connection error:', err);
+        process.exit(1);
+    }
+};
+
+
+
+
+module.exports = { connectDB }
