@@ -1,6 +1,6 @@
 # NeuroTask
 
-> Academic team project and portfolio case study for task and project management using microservices, containerization, observability, and distributed analytics.
+> Academic project and portfolio case study for task and project management using microservices, containerization, observability, and distributed analytics.
 
 ## Overview
 
@@ -143,8 +143,6 @@ This application was developed as a university team project to apply concepts re
 
 Because it is an academic prototype, future improvements include token-based authentication, role-based authorization, automated tests, CI/CD, and stronger cross-service consistency.
 
-## Author
 
-Repository maintained by [Steven López](https://github.com/StevenVegaL).
 
-The original application was created as a collaborative university project.
+
