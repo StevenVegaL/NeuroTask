@@ -1,0 +1,34 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+vendor/
+
+# Local databases and runtime data
+db/mongo/data/
+data/
+*.wt
+WiredTiger*
+mongod.lock
+
+# Logs and coverage
+*.log
+logs/
+coverage/
+.nyc_output/
+
+# Build and cache output
+dist/
+build/
+.cache/
+tmp/
+temp/
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
